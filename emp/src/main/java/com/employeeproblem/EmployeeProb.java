@@ -21,21 +21,18 @@ public class EmployeeProb
 				   monthly_wage+=daily_employee_wage;
 				   working_hours+=8;//Adding 8 working hours when full day
 				   working_days+=1;//Adding 1 day every time irrespective of type of attendance
-				   
 				   break;
 			case 2://System.out.println("When employee works Part time a day throughout the month");
 			   	   daily_employee_wage=IS_WAGE_PER_HOUR*IS_PART_TIME_HOURS;//Calculation of monthly wage
 			   	   monthly_wage+=daily_employee_wage;
 			   	   working_hours+=4;//Adding 4 working hours when part time
 				   working_days+=1;//Adding 1 day every time irrespective of type of attendance
-			   	   
 			   	   break;
 			default://System.out.println("When an employee is Absent throughout the month");
 				    daily_employee_wage=IS_WAGE_PER_HOUR*0;
 				    monthly_wage+=daily_employee_wage;
 				    working_hours+=0;//Adding 0 working hours when absent
-					working_days+=1;//Adding 1 day every time irrespective of type of attendance
-				    
+				    working_days+=1;//Adding 1 day every time irrespective of type of attendance
 				    break;
 			}
 		}
