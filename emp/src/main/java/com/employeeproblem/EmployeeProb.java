@@ -1,10 +1,10 @@
 package com.employeeproblem;
 
-class Compute
+class Compute//Class compute
 {
 	int Compute_wage(int x,int y)
 	{
-		return x*y;
+		return x*y;//Class compute created within which employee daily wage is calculated which in turn help in monthly wage calculation
 	}
 }
 
@@ -18,7 +18,7 @@ public class EmployeeProb
 	public static void main(String[] args) 
 	{
 		Compute obj=new Compute();
-		int daily_employee_wage=0,monthly_wage=0,working_hours=0,working_days=0;
+		int monthly_wage=0,working_hours=0,working_days=0;//daily_employee_wage=0
 		
 		while(working_hours<100 && working_days<20)
 		{
