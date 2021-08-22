@@ -1,5 +1,13 @@
 package com.employeeproblem;
 
+class Compute
+{
+	int Compute_wage(int x,int y)
+	{
+		return x*y;
+	}
+}
+
 public class EmployeeProb 
 {
 	public static final int IS_WAGE_PER_HOUR=20,IS_FULL_DAY_HOURS=8,IS_PART_TIME_HOURS=4,IS_MONTHLY_DAYS=20;
@@ -9,6 +17,7 @@ public class EmployeeProb
 
 	public static void main(String[] args) 
 	{
+		Compute obj=new Compute();
 		int daily_employee_wage=0,monthly_wage=0,working_hours=0,working_days=0;
 		
 		while(working_hours<100 && working_days<20)
@@ -17,20 +26,21 @@ public class EmployeeProb
 			switch(empCheck)
 			{
 			case 1://System.out.println("When employee works Full day throughout the month");
-				   daily_employee_wage=IS_WAGE_PER_HOUR*IS_FULL_DAY_HOURS;//Calculation of monthly wage
-				   monthly_wage+=daily_employee_wage;
+				   //daily_employee_wage=IS_WAGE_PER_HOUR*IS_FULL_DAY_HOURS;//Calculation of monthly wage
+				   
+				   monthly_wage+=obj.Compute_wage(IS_WAGE_PER_HOUR,IS_FULL_DAY_HOURS);
 				   working_hours+=8;//Adding 8 working hours when full day
 				   working_days+=1;//Adding 1 day every time irrespective of type of attendance
 				   break;
 			case 2://System.out.println("When employee works Part time a day throughout the month");
-			   	   daily_employee_wage=IS_WAGE_PER_HOUR*IS_PART_TIME_HOURS;//Calculation of monthly wage
-			   	   monthly_wage+=daily_employee_wage;
+			   	   //daily_employee_wage=IS_WAGE_PER_HOUR*IS_PART_TIME_HOURS;//Calculation of monthly wage
+			   	   monthly_wage+=obj.Compute_wage(IS_WAGE_PER_HOUR,IS_PART_TIME_HOURS);
 			   	   working_hours+=4;//Adding 4 working hours when part time
 				   working_days+=1;//Adding 1 day every time irrespective of type of attendance
 			   	   break;
 			default://System.out.println("When an employee is Absent throughout the month");
-				    daily_employee_wage=IS_WAGE_PER_HOUR*0;
-				    monthly_wage+=daily_employee_wage;
+				    //daily_employee_wage=IS_WAGE_PER_HOUR*0;
+				    monthly_wage+=obj.Compute_wage(IS_WAGE_PER_HOUR,0);
 				    working_hours+=0;//Adding 0 working hours when absent
 				    working_days+=1;//Adding 1 day every time irrespective of type of attendance
 				    break;
