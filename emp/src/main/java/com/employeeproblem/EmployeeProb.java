@@ -1,28 +1,41 @@
 package com.employeeproblem;
-
-class Compute//Class compute
+//Class compute
+class Compute
 {
+	/* Class compute created within which employee daily wage is
+	 * calculated which in turn help in monthly wage calculation
+	 */
 	int Compute_wage(int x,int y)
 	{
-		return x*y;//Class compute created within which employee daily wage is calculated which in turn help in monthly wage calculation
+		return x*y;
 	}
 }
-
+/* @param IS_FULL_TIME=1 and @param IS_PART_TIME=2 removed these variables to implement switch case
+ * Here above are global variables where full time and 
+ * part time are values to show nature of attendance
+ * and full day hours and part time hours are nothing 
+ * but number of hours worked per day.
+ * @param IS_WAGE_PER_HOUR is a hourly fixed rate
+ * @param IS_FULL_DAY_HOURS is a fixed number of hours that a employ works in a full day
+ * @param IS_PART_TIME_HOURS is a fixed number of hours that a employ works in a part time
+ * @param IS_MONTHLY_DAYS is a fixed number of days that a employ can work in a month
+ */
 public class EmployeeProb 
 {
 	public static final int IS_WAGE_PER_HOUR=20,IS_FULL_DAY_HOURS=8,IS_PART_TIME_HOURS=4,IS_MONTHLY_DAYS=20;
-	//IS_FULL_TIME=1,IS_PART_TIME=2 removed these variables to implement switch case
-	//Here above are global variables where full time and part time are values to show nature of attendance
-	//and full day hours and part time hours are nothing but number of hours worked per day.
-
+	/* @param monthly_wage is a variable monthly wage which depends on max number of hours worked or max number of days
+	 * @param working_hours is a variable used to store number of total hours worked in a month
+	 * @param working_days is a variable used to store number of total days worked in a month
+	 */
 	public static void main(String[] args) 
 	{
 		Compute obj=new Compute();
 		int monthly_wage=0,working_hours=0,working_days=0;//daily_employee_wage=0
-		
+		//Will stop calculating the employee monthly wage when either of the max limits of max working hours or days is achieved 
+		//@param empCheck to generate random values in range of 0-2 where a floor will ignore decimal part
 		while(working_hours<100 && working_days<20)
 		{
-			int empCheck=(int)(Math.floor(Math.random()*10)%3);//To generate random values in range of 0-2 where a floor will ignore decimal part
+			int empCheck=(int)(Math.floor(Math.random()*10)%3);
 			switch(empCheck)
 			{
 			case 1://System.out.println("When employee works Full day throughout the month");
