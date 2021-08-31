@@ -4,11 +4,6 @@ import java.util.Scanner;
 
 /* Class compute created within which employee daily wage is
  * calculated which in turn help in monthly wage calculation
- * @param isWagePerHour is a hourly fixed rate for that company
- * @param isFullDayHours is a fixed number of hours that a employ works in a full day for that company
- * @param isPartTimeHours is a fixed number of hours that a employ works in a part time for that company
- * @param isMaxMonthlyDays is a max fixed number of days that a employ can work in a month for that company
- * @param isMaxWorkingHours is a max fixed number of days that a employ can work in a month for that company
  */
 class Compute
 {
@@ -50,7 +45,14 @@ class Compute
 		return x*y;
 	}
 }
-
+/* @param isWagePerHour is a hourly fixed rate for that company
+ * @param isFullDayHours is a fixed number of hours that a employ works in a full day for that company
+ * @param isPartTimeHours is a fixed number of hours that a employ works in a part time for that company
+ * @param isMaxMonthlyDays is a max fixed number of days that a employ can work in a month for that company
+ * @param isMaxWorkingHours is a max fixed number of days that a employ can work in a month for that company
+ * Everytime a new object is created when user enters y or Y for new company's computation
+ * and values for that company is passed through newCompany function
+ */
 public class EmployeeProb 
 {
 	public static void main(String[] args) 
